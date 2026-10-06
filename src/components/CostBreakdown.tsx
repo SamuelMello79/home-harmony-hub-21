@@ -78,11 +78,8 @@ export function CostBreakdown({ occ, total }: { occ: Occurrence[]; total: number
                     cy={size / 2}
                     r={r}
                     fill="none"
-                    stroke={s.color}
                     strokeWidth={stroke}
-                    strokeDasharray={`${Math.max(dash - 2, 0.01)} ${c - dash + 2}`}
-                    strokeDashoffset={offset}
-                    strokeLinecap="round"
+                    style={{ stroke: s.color, strokeDasharray: `${Math.max(dash - 2, 0.01)} ${c - dash + 2}`, strokeDashoffset: offset, strokeLinecap: "round" }}
                     className="transition-[stroke-width] duration-200 hover:stroke-[34]"
                   />
                 );
