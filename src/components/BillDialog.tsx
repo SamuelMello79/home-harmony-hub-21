@@ -2,10 +2,10 @@ import { useState } from "react";
 import type { Bill, BillType } from "@/lib/bills";
 
 interface Props {
-  initial?: Bill | null;
+  initial?: Bill | null | undefined;
   categories: string[];
   month: string;
-  automationOnly?: boolean;
+  automationOnly?: boolean | undefined;
   onClose: () => void;
   onSave: (b: Bill) => void;
   onDelete?: (id: string) => void;

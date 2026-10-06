@@ -10,8 +10,8 @@ export interface Bill {
   amount: number; // valor por mês / por parcela
   dueDay: number;
   startMonth: string; // YYYY-MM
-  installments?: number; // variável parcelada
-  automation?: { active: boolean; reminderDays: number } | null; // fixa
+  installments?: number | undefined; // variável parcelada
+  automation?: { active: boolean; reminderDays: number } | null | undefined; // fixa
 }
 
 export interface State {
