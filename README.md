@@ -1,27 +1,26 @@
-# Home Finance Hub
+# Caução – Controle Doméstico
+## Introdução
+A aplicação foi desenvolvida a partir da IA do lovable, e serve para gerenciar e controlar as contas fixas e variáveis permitindo que o usuário possa controlar suas contas eficientemente. Além de evitar o retrabalho de ficar cadastrando uma mesma conta várias vezes.
 
-Desenvolva uma aplicação para controle de contas fixas da casa e e contas variaveis com parcelas. Faça uma interface dinamica e funcional. O usuário deve conseguir separar suas contas por categorias, tipo de conta, marcar o que já foi pago e o que não foi. 
-Para além disso, para as contas do tipo fixa que vem todo mês em um data de vencimento em especifico ele permita gerar automações.
+## Alterações realizadas
+Foi adicionado o gráfico em formato de pizza para realizar a identificação da onde mais está saindo o dinheiro do usuário por categoria.
 
-This project was built with [Lovable](https://lovable.dev).
+## Telas finalizadas do protótipo
+Na tela inicial o usuário poderá visualizar o valor total de contas, o valor pago, o valor pendente e as contas vencidas. Além de um gráfico de pizza mostrando o percentual por categorias cadastradas pelo usuário em cada conta.
+<img width="567" height="374" alt="image" src="https://github.com/user-attachments/assets/5a80d129-73f2-4114-94ed-0a392ca7d90b" />
 
-**Live app**: https://home-harmony-hub-21.lovable.app
+Clicando em nova conta podemos realizar o cadastro da nova conta e se caso a conta tiver uma categoria diferente das já cadastradas o usuário pode cadastrar uma nova categoria.
+<img width="202" height="234" alt="image" src="https://github.com/user-attachments/assets/62797cd4-1a1d-428e-8200-9c43a4894452" />
+<img width="181" height="233" alt="image" src="https://github.com/user-attachments/assets/87c0f6d2-8b7b-4cfc-9c63-9bc295f2c42e" />
 
-## Build with Lovable
+Na tabela temos a listagem das contas presentes no mês, desde parcelas em aberto, valor vencidos e contas recorrentes geradas pelas automações. No final também podemos ver as listagens das contas recorrentes criadas pela automação.
+<img width="567" height="412" alt="image" src="https://github.com/user-attachments/assets/7da57a58-1457-4648-83b2-b5d550a90cc4" />
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/3dd9613c-e09c-5c48-a14c-d4bbb3535e43).
+Ao clicar em criar automação, podemos realizar o cadastro de uma automação recorrente. Seguindo o mesmo princípio de cadastro de conta convencional.
+<img width="273" height="313" alt="image" src="https://github.com/user-attachments/assets/95c792c8-5385-496a-8480-f895378d09b4" />
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+## Link da aplicação:
+Link lovable: Caução — Controle de contas da casa
+Link gihtub: SamuelMello79/home-harmony-hub-21
+Link vercel: Caução — Controle de contas da casa
 
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
-
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
