@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import { BillDialog } from "@/components/BillDialog";
+import { CostBreakdown } from "@/components/CostBreakdown";
 import { addMonths, brl, monthKey, monthLabel, occurrencesFor, useBills, type Bill, type BillType } from "@/lib/bills";
 
 export const Route = createFileRoute("/")({
@@ -108,6 +109,11 @@ function Index() {
           </div>
           <p className="mt-2 text-[12px] text-muted-foreground">{progress}% do mês já pago</p>
         </div>
+
+        <div className="mb-6">
+          <CostBreakdown occ={occ} total={total} />
+        </div>
+
 
         <div className="frost rounded-2xl ring-1 ring-border overflow-hidden">
           <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-4 border-b border-border">
