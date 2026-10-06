@@ -36,6 +36,14 @@
   --color-blob-1: var(--blob-1);
   --color-blob-2: var(--blob-2);
   --color-blob-3: var(--blob-3);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-chart-6: var(--chart-6);
+  --color-chart-7: var(--chart-7);
+  --color-chart-8: var(--chart-8);
 }
 
 :root {
@@ -64,6 +72,14 @@
   --blob-1: oklch(0.855 0.138 181 / 0.4);
   --blob-2: oklch(0.828 0.111 230 / 0.45);
   --blob-3: oklch(0.879 0.169 91 / 0.4);
+  --chart-1: oklch(0.6 0.104 185);
+  --chart-2: oklch(0.666 0.157 58);
+  --chart-3: oklch(0.6 0.15 295);
+  --chart-4: oklch(0.62 0.13 250);
+  --chart-5: oklch(0.65 0.16 350);
+  --chart-6: oklch(0.65 0.13 145);
+  --chart-7: oklch(0.7 0.14 95);
+  --chart-8: oklch(0.55 0.12 210);
 }
 
 @utility frost {
