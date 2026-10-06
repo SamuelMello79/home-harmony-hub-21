@@ -21,7 +21,7 @@ export function CostBreakdown({ occ, total }: { occ: Occurrence[]; total: number
       const cur = map.get(key) ?? { value: 0, count: 0 };
       map.set(key, { value: cur.value + o.bill.amount, count: cur.count + 1 });
     }
-    const palette = Array.from({ length: 8 }, (_, i) => `var(--color-chart-${(i % 8) + 1})`);
+    const palette = Array.from({ length: 8 }, (_, i) => `var(--chart-${(i % 8) + 1})`);
     return [...map.entries()]
       .sort((a, b) => b[1].value - a[1].value)
       .map(([key, v], i) => ({
