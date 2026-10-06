@@ -25,19 +25,24 @@ const KEY = "caucao-state-v1";
 export const monthKey = (d: Date) =>
   `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
 
+const ym = (m: string): [number, number] => {
+  const [y = 0, mo = 1] = m.split("-").map(Number);
+  return [y, mo];
+};
+
 export const addMonths = (m: string, n: number) => {
-  const [y, mo] = m.split("-").map(Number);
+  const [y, mo] = ym(m);
   return monthKey(new Date(y, mo - 1 + n, 1));
 };
 
 export const diffMonths = (a: string, b: string) => {
-  const [ya, ma] = a.split("-").map(Number);
-  const [yb, mb] = b.split("-").map(Number);
+  const [ya, ma] = ym(a);
+  const [yb, mb] = ym(b);
   return (yb - ya) * 12 + (mb - ma);
 };
 
 export const monthLabel = (m: string) => {
-  const [y, mo] = m.split("-").map(Number);
+  const [y, mo] = ym(m);
   const s = new Date(y, mo - 1, 1).toLocaleDateString("pt-BR", { month: "long", year: "numeric" });
   return s.charAt(0).toUpperCase() + s.slice(1);
 };
@@ -58,14 +63,14 @@ function seed(): State {
   return {
     bills: b,
     categories: ["Moradia", "Serviços", "Saúde", "Educação", "Transporte", "Lazer"],
-    paid: { [b[0].id]: [addMonths(m, -2), addMonths(m, -1), m] },
+    paid: { [b[0]!.id]: [addMonths(m, -2), addMonths(m, -1), m] },
   };
 }
 
 export interface Occurrence {
   bill: Bill;
   month: string;
-  installment?: number;
+  installment?: number | undefined;
   paid: boolean;
   status: "pago" | "pendente" | "vencida";
   dueDate: Date;
@@ -86,7 +91,7 @@ export function occurrencesFor(state: State, month: string): Occurrence[] {
       if (d >= n) continue;
       installment = d + 1;
     }
-    const [y, mo] = month.split("-").map(Number);
+    const [y, mo] = ym(month);
     const last = new Date(y, mo, 0).getDate();
     const dueDate = new Date(y, mo - 1, Math.min(bill.dueDay, last));
     const paid = (state.paid[bill.id] ?? []).includes(month);
