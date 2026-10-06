@@ -20,6 +20,6 @@ Ao clicar em criar automação, podemos realizar o cadastro de uma automação r
 <img width="273" height="313" alt="image" src="https://github.com/user-attachments/assets/95c792c8-5385-496a-8480-f895378d09b4" />
 
 ## Link da aplicação:
-Link gihtub: https://github.com/SamuelMello79/home-harmony-hub-21
+Link gihtub: https://github.com/SamuelMello79/home-harmony-hub-21 <br>
 Link vercel: https://home-harmony-hub-21.vercel.app/
 
